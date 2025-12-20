@@ -5,17 +5,14 @@ public enum TeamId {
   TeamB = 1
 }
 
-public class Team : MonoBehaviour
-{
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+public class Team : MonoBehaviour {
+  [field: SerializeField] public TeamId Id { get; private set; } = TeamId.TeamA;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  void Start() {
+
+  }
+
+  void Update() {
+
+  }
 }

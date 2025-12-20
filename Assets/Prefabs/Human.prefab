@@ -121,6 +121,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8005448503934148724}
+  - component: {fileID: 4141903895482638693}
+  - component: {fileID: 8826880761184073441}
+  - component: {fileID: 7191926101502480372}
+  - component: {fileID: 1099698168700287924}
+  - component: {fileID: 7667348824197228212}
+  - component: {fileID: 7489213034565034553}
   m_Layer: 0
   m_Name: Human
   m_TagString: Untagged
@@ -146,6 +152,89 @@ Transform:
   - {fileID: 4161251672569000684}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4141903895482638693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052778467312510645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9fb2e45a18ba5f4c852c3a4cc1ff3fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Team
+  <Id>k__BackingField: 0
+--- !u!114 &8826880761184073441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052778467312510645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01309be470735204cad9efa85a52c6b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Health
+  maxHp: 10
+  center: {fileID: 6697722213817671519}
+--- !u!114 &7191926101502480372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052778467312510645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 910934de6bb79de4483ad8515fe18915, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Fighter
+  Team: {fileID: 0}
+  Health: {fileID: 0}
+--- !u!114 &1099698168700287924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052778467312510645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8b8c4b69ed15eb47b9002ebac6d0bdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SimpleBrain
+  self: {fileID: 0}
+--- !u!114 &7667348824197228212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052778467312510645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86bfa67ca20070f4d9c4542a399fa552, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MoveToTarget
+  moveSpeed: 2.5
+  stoppingDistance: 1.1
+--- !u!114 &7489213034565034553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052778467312510645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b1b9a932f920844a8dc6f37d7e16baf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MeleeAttack
+  range: 1.2
+  damage: 1
+  attacksPerSecond: 1
 --- !u!1 &4632036773085794899
 GameObject:
   m_ObjectHideFlags: 0
