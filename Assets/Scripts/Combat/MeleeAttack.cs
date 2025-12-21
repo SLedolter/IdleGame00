@@ -3,6 +3,7 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public sealed class MeleeAttack : MonoBehaviour {
   [SerializeField] private float range = 1.2f;
+  public float Range => range;
   [SerializeField] private float damage = 1f;
   [SerializeField] private float attacksPerSecond = 1f;
 

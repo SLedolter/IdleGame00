@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public interface IDamageable {
@@ -12,6 +13,7 @@ public sealed class Health : MonoBehaviour, IDamageable {
 
   public bool IsAlive => currentHp > 0f;
   public Transform Center => center != null ? center : transform;
+  public event Action<float> Damaged;
 
   private float currentHp;
 
@@ -23,6 +25,7 @@ public sealed class Health : MonoBehaviour, IDamageable {
     if (!IsAlive) { return; }
 
     currentHp -= amount;
+    Damaged?.Invoke(amount);
     if (currentHp <= 0f) {
       currentHp = 0f;
       // Für jetzt einfach deaktivieren, später Death-Animation, Loot, Pooling, etc.
