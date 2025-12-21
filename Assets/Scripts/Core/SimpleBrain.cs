@@ -2,12 +2,12 @@ using UnityEngine;
 
 [DisallowMultipleComponent]
 public class SimpleBrain : MonoBehaviour {
-  public Fighter CurrentTarget {  get; private set; }
+  public HumanBase CurrentTarget {  get; private set; }
 
-  public Fighter self;
+  public HumanBase self;
 
   private void Awake() {
-    self = GetComponent<Fighter>();
+    self = GetComponent<HumanBase>();
     if(self == null) { Debug.LogError("SimpleBrain braucht Fighter-Komponente.", this); }
   }
 
@@ -15,10 +15,10 @@ public class SimpleBrain : MonoBehaviour {
     CurrentTarget = FindNearestEnemy();
   }
 
-  private Fighter FindNearestEnemy() {
+  private HumanBase FindNearestEnemy() {
     if (self == null || self.Team == null) { return null; }
 
-    Fighter best = null;
+    HumanBase best = null;
     float bestSqr = float.PositiveInfinity;
 
     foreach(var other in FighterRegistry.Fighters) {

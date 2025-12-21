@@ -2,7 +2,7 @@ using UnityEngine;
 
 [DisallowMultipleComponent]
 public sealed class MeleeAttack : MonoBehaviour {
-  [SerializeField] private float range = 0.2f;
+  [SerializeField] private float range = 1.2f;
   [SerializeField] private float damage = 1f;
   [SerializeField] private float attacksPerSecond = 1f;
 
@@ -20,12 +20,13 @@ public sealed class MeleeAttack : MonoBehaviour {
     if (Time.time < nextAttackTime) { return; }
 
     Vector3 a = transform.position; a.y = 0f;
-    Vector3 b = transform.position; b.y = 0f;
+    Vector3 b = target.transform.position; b.y = 0f;
 
     if((b - a).sqrMagnitude > range * range) { return; }
 
     // Schaden
     target.Health.TakeDamage(damage);
+    Debug.Log(brain.self.name + " deals " + damage);
     if(!target.Health.IsAlive) {
       Debug.Log(brain.self.name + " wins!");
     }

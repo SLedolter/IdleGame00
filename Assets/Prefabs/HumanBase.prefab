@@ -127,8 +127,9 @@ GameObject:
   - component: {fileID: 1099698168700287924}
   - component: {fileID: 7667348824197228212}
   - component: {fileID: 7489213034565034553}
+  - component: {fileID: 2594792095454941550}
   m_Layer: 0
-  m_Name: Human
+  m_Name: HumanBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -235,6 +236,33 @@ MonoBehaviour:
   range: 1.2
   damage: 1
   attacksPerSecond: 1
+--- !u!54 &2594792095454941550
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052778467312510645}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 80
+  m_CollisionDetection: 1
 --- !u!1 &4632036773085794899
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,8 +459,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 2.3434055, z: 1}
-  m_Center: {x: 0, y: 1.12945, z: 0}
+  m_Size: {x: 1, y: 2.3434055, z: 0.9719078}
+  m_Center: {x: 0, y: 1.12945, z: -0.014045984}
 --- !u!1 &5991117686948785098
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@ using UnityEngine;
 using static IDamageable;
 
 [DisallowMultipleComponent]
-public sealed class Fighter : MonoBehaviour {
+public sealed class HumanBase : MonoBehaviour {
   public Team Team;
   public Health Health;
 
