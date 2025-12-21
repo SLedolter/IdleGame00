@@ -1,12 +1,6 @@
 using System;
 using UnityEngine;
 
-public interface IDamageable {
-  Transform Center { get; }
-  void TakeDamage(float amount);
-  bool IsAlive { get; }
-}
-
 public sealed class Health : MonoBehaviour, IDamageable {
   [SerializeField] private float maxHp = 20f;
   [SerializeField] private Transform center; // Center-Empty

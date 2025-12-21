@@ -1215,6 +1215,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1039935916}
     m_Modifications:
+    - target: {fileID: 774255315435719730, guid: 187d2722bb2b16b4690237e6ae4c6818, type: 3}
+      propertyPath: range
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 1443002581631489678, guid: 187d2722bb2b16b4690237e6ae4c6818, type: 3}
       propertyPath: m_Name
       value: Human_B1
