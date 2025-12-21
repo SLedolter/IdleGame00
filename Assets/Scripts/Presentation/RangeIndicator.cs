@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(LineRenderer))]
 public sealed class RangeIndicator : MonoBehaviour {
   [Header("Source")]
-  [SerializeField] private MeleeAttack meleeAttack;
+  [SerializeField] private AttackBase attack;
 
   [Header("Visual")]
   [SerializeField] private int segments = 48;
@@ -35,7 +35,7 @@ public sealed class RangeIndicator : MonoBehaviour {
   }
 
   public void Rebuild() {
-    float radius = meleeAttack != null ? meleeAttack.Range : 1.2f;
+    float radius = attack != null ? attack.Range : 1.2f;
 
     lineRenderer.positionCount = Mathf.Max(8, segments);
     for(int i = 0; i < lineRenderer.positionCount; i++) {

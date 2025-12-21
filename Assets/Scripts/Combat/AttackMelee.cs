@@ -1,9 +1,7 @@
 using UnityEngine;
 
 [DisallowMultipleComponent]
-public sealed class MeleeAttack : MonoBehaviour {
-  [SerializeField] private float range = 1.2f;
-  public float Range => range;
+public sealed class AttackMelee : AttackBase {
   [SerializeField] private float damage = 1f;
   [SerializeField] private float attacksPerSecond = 1f;
 
@@ -23,7 +21,7 @@ public sealed class MeleeAttack : MonoBehaviour {
     Vector3 a = transform.position; a.y = 0f;
     Vector3 b = target.transform.position; b.y = 0f;
 
-    if((b - a).sqrMagnitude > range * range) { return; }
+    if((b - a).sqrMagnitude > Range * Range) { return; }
 
     // Schaden
     target.Health.TakeDamage(damage);
